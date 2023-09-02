@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-color: rgb(247, 247, 247);
+  --text-color: rgb(20, 20, 20);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.flex-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 90vh;
+}
+
+.content--div {
+  border-radius: 12px;
+  padding: 35px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.title {
+  font-size: 2.7rem;
+}
+
+.dice--div {
+  margin: 15px;
+  height: 45px;
+  width: 45px;
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  box-shadow: 0.5px 0.5px 3px var(--shadow-color);
+  cursor: pointer;
+}
+
+.dice--div p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header--div {
+  justify-content: space-between;
+}
+
+.dice--btn,
+.reset--btn,
+.play--again--btn {
+  letter-spacing: 2px;
+  padding: 8px 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+}
+
+.reset--btn {
+  border: none;
+  font-size: 1rem;
+  color: var(--bg-color);
+  background-color: rgb(243, 27, 27);
+}
+
+.reset--btn:hover {
+  background-color: rgb(216, 21, 21);
+}
+
+.play--again--btn {
+  background-color: aquamarine;
+}
+
+.play--again--btn:hover {
+  background-color: rgb(67, 238, 181)
+}
+
+.dice--area {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  min-height: 150px;
+  min-width: 375px;
+  padding: 3px;
+  position: relative;
+}
+
+.win {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  color: rgb(9, 150, 9);
+}
+
+.win--detail {
+  position: absolute;
+  top: 62%;
+  left: 40%;
+}
+
+.roll--btn--area {
+  position: relative;
+}
+
+.roll--btn--area>#rolls-text {
+  position: absolute;
+  right: 13%;
+  top: 23%;
+}
+
+.roll--btn--area>#time-text {
+  position: absolute;
+  right: 0%;
+  top: 23%;
+}
+
+.bestscore--div div {
+  width: fit-content;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--bg-color);
+  box-shadow: 0.6px 0.6px 5px var(--shadow-color);
+}
+
+.bestscore--div p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media (min-width:390px) and (max-width:470px) {
+  .container {
+    scale: 0.9;
+  }
+
+  .content--div {
+    padding: 15px;
+  }
+}
+
+@media (min-width:335px) and (max-width:389px) {
+  .container {
+    scale: 0.7;
+  }
+}
+
+@media (max-width:334px) {
+  .container {
+    scale: 0.6;
+  }
+}
